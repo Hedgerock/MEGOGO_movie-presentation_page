@@ -138,6 +138,21 @@
            display: none;
         }
     }
+    .search {
+        &__field {
+            top: 24px;
+        }
+        &__filter {
+            top: 24px;
+        }
+        &__filter::before {
+            left: -105px;
+        }
+        &__close-button_visible {
+            left: -108px;
+            top: 25px;
+        }
+    }
     .movie-container {
         max-height: 200px;
         justify-content: center;
