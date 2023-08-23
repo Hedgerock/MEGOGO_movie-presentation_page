@@ -1,0 +1,226 @@
+.header {
+    position: sticky;
+    z-index: 1000;
+    height: 4rem;
+    top: 0;
+    &__dropdown-menu {
+        display: flex;
+    }
+}
+
+.header-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-title {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-elements {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 4rem;
+    &:hover &__title {
+        color: orangered;
+        background-color: white;
+    }
+    &:hover &__title_special {
+        color: orangered;
+        background-color: initial;
+    }
+}
+
+.header-elements__title {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    height: 100%;
+    transition: all .1s ease-in-out;
+    &:hover {
+        background-color: white;
+        color: orangered;
+    }
+
+    &_active {
+        background-color: white;
+        color: orangered;
+    }
+    &:hover + .header-list {
+        display: block;
+    }
+    &_extra {
+        display: flex;
+        color: grey;
+        font-size: 1.5rem;
+    }
+    &_extra:hover {
+        background-color: white;
+        color: orangered;
+    }
+    &_extra span {
+        padding-bottom: .5rem;
+    }
+    &_special:hover {
+        background-color: initial;
+    }
+}
+
+.header-list {
+    display: none;
+    position: absolute;
+    top:56px;
+    left: 0;
+    background-color: white;
+    padding: 1rem 2rem;
+    z-index: 5;
+    max-height: 25rem;
+    overflow: auto;
+    &:hover {
+        display: block;
+    }
+    &_on-click {
+        left: -77px;
+        display: none;
+    }
+    &_visible {
+        display: block;
+    }
+    &__element {
+        padding: .5rem 0;
+    }
+    &__element a:hover {
+        color: orangered;
+    }
+    &__hidden-element {
+        display: none;
+    }
+}
+
+.header-options {
+    color: white;
+    padding: .5rem 1.2rem;
+    border: 1px solid white;
+    border-radius: .2rem;
+    &:hover {
+        color: orangered;
+        border: 1px solid orangered;
+    }
+}
+
+.search {
+    position: relative;
+    &__field {
+        opacity: 0;
+        z-index: -1;
+        height: 4rem;
+        position: absolute;
+        top: -18px;
+        right: -30px;
+        width: 17rem;
+        outline: none;
+        border: none;
+        font-size: 1.2rem;
+        padding-left: 3rem;
+        transition: all .3s ease-in-out;
+    }
+    &__field::placeholder {
+        font-size: 1.2rem;
+        color: #cccccc;
+    }
+    &__field_visible {
+        display: block;
+        opacity: 1;
+        z-index: 0;
+    }
+    &__filter {
+        z-index: -1;
+        opacity: 0;
+        height: 4rem;
+        transition: all .3s ease-in-out;
+        position: absolute;
+        top: 20px;
+    }
+    &__filter::before {
+        position: absolute;
+        content: '\f002';
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 1.2rem;
+        color: silver;
+        left: -165px;
+    }
+    &__filter_visible {
+        display: flex;
+        align-items: center;
+        opacity: 1;
+        right: -25px;
+        top: -20px;
+        z-index: 0;
+    }
+    &__button {
+        color: silver;
+    }
+    &__button_active {
+        position: absolute;
+        left: -180px;
+        z-index: 10;
+    }
+    &__close-button {
+        opacity: 0;
+        display: none;
+    }
+    &__close-button_visible {
+        display: flex;
+        opacity: 1;
+        position: absolute;
+        left: -180px;
+        top: -15px;
+        transition: all .3s ease-in-out;
+    }
+}
+
+.search [type = "search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+.header-language-sector {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &__title {
+        color: silver; 
+        height: 100%; 
+    }
+    &__title_active {
+        background-color: white;
+        color: orangered;
+    }
+    &__title:hover {
+        color: white;
+    }
+    &__title_active:hover {
+        color: silver;
+    }
+}
+
+.header-authorization {
+    color: white;
+    font-weight: bold;
+    &:hover {
+        color: orangered;
+    }
+}

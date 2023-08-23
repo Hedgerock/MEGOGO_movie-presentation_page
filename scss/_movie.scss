@@ -1,0 +1,352 @@
+.movie-container {
+    max-width: 1150px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.movie__trailer {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    z-index: -1;
+}
+
+.poster {
+    max-width: 140px;
+    height: 210px;
+    margin: 0 0 2rem 2.5rem;
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        z-index: 20;
+    }
+}
+
+.movie-info {
+    max-width: 1150px;
+    max-height: 600px;
+    margin: 0 0 3rem 1.5rem;
+}
+
+.top-row {
+    display: flex;
+    &__text {
+        color: silver;
+        text-transform: uppercase;
+        margin-left: 1rem;
+        font-weight: bold;
+        cursor: default;
+    }
+    &__text:first-child {
+        color: #00C3C3;
+        margin-left: 0;
+    }
+}
+
+.movie-info__title {
+    color: white;
+    margin: 2rem 0 1.5rem 0;
+    font-size: 2.2rem;
+    font-weight: normal;
+    cursor: default;
+}
+
+.bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__category {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__link {
+        color: white;
+        font-size: 1.3rem;
+        padding: .7rem 2.5rem .7rem 3rem;
+        background-color: #FF6600;
+        border-radius: .3rem;
+        position: relative;
+        transition: background-color .2s ease-in;
+    }
+    &__link::before {
+        content: '\f04b';
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 1rem;
+        color: white;
+        position: absolute;
+        left: 20px;
+        top: 45%;
+        transform: translateY(-50%);
+    }
+    &__link:hover {
+        background-color: orangered;
+    }
+    &__text {
+        color: silver;
+        margin: 1rem 0 0 0;
+        cursor: default;
+    }
+    &__favorites-button {
+        color: white;
+        padding: .7rem 2.5rem;
+        border: 1px solid silver;
+        border-radius: .4rem;
+        transition: .3s ease-in-out;
+    }
+    &__icon {
+        font-size: 2.1rem;
+    }
+    &__icon_favorites {
+        font-size: initial;
+    }
+    &__favorites-button:hover {
+        color: orangered;
+    }
+    &__button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: silver;
+        transition: all .2s ease-in-out;
+    }
+    &__icon_dislike {
+        transform: rotateY(180deg);
+    }
+    &__icon_like, &__icon_dislike {
+        padding: .4rem 0;
+    }
+    &__text_another {
+        font-size: 1rem;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+    }
+    &__button_like:hover .bottom-row__text_another,
+    &__button_like:hover {
+        color: #00a132;
+    }
+    &__button_dislike:hover .bottom-row__text_another,
+    &__button_dislike:hover {
+        color: #ff1111;
+    }
+}
+
+.volume-button {
+    position: absolute;
+    font-size: 1.8rem;
+    color: white;
+    top: 30px;
+    right: 35px;
+}
+
+.movie-description {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 50px 300px 0 100px;
+    background-color: white;
+    &__more {
+        color: orangered;
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    &__paragraph_invisible {
+        display: none;
+    }
+    &__paragraph_visible {
+        display: block;
+    }
+    &__paragraph {
+        font-size: 1.15rem;
+    }
+}
+
+.direction {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.direction__link {
+    color: grey;
+    font-size: 1.1rem;
+    margin-right: .5rem;
+    transition: .2s ease-in-out;
+    text-transform: uppercase;
+    max-width: 15rem;
+    overflow: hidden;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:hover {
+        color: orangered;
+    }
+    &_selected {
+        padding-bottom: .1rem;
+        border-bottom: 2px solid orangered;
+        color: black;
+        text-align: center;
+    }
+    &_selected:hover {
+        color: grey;
+    }
+}
+
+.bread-crumbs {
+    display: flex;
+    margin: .5rem 0;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    &__element:not(:last-of-type):after {
+        content: ', ';
+        margin-right: .5rem;
+        color: black;
+    }
+    &__element {
+        font-size: 1.2rem;
+        color: #3333;
+        transition: all .3s ease-in-out;
+        max-width: 15rem;
+        max-height: 3rem;
+        overflow: hidden;
+    }
+    &__element:first-child {
+        cursor: default;
+        pointer-events: none;
+    }
+    &__link {
+        transition: all .2s ease-in-out;
+    }
+    &__link:hover {
+        color: orangered;
+    }
+}
+
+.additional-information {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    &__text {
+        color: silver;   
+    }
+    &__text:first-child {
+        border: 1px solid silver;
+        border-radius: .2rem;
+        padding: .2rem .5rem;
+        margin-right: .5rem;
+    }
+    &__text:last-child {
+        font-size: 1.2rem;
+    }
+}
+
+.social-media {
+    margin-top: 2.5rem;
+    border-bottom: 1px solid silver;
+    padding-bottom: 2rem;
+    display: flex;
+    &__link {
+        padding: .4rem 1rem;
+        border: 1px solid silver; 
+        border-radius: .2rem;
+    }
+    &__link_facebook:hover {
+        background-color: #3b5998;
+    }
+    &__link_facebook:hover &__icon_facebook {
+        color: white;
+    }
+    &__link_twitter:hover {
+        background-color: #1d9bf0;
+    }
+    &__link_twitter:hover &__icon_twitter {
+        color: white;
+    }
+    &__link:not(:last-child) {
+        margin-right: 1rem;
+    }
+    &__icon {
+        font-size: 1.2rem;
+    }
+    &__icon_facebook {
+        color: #3b5998;
+    }
+    &__icon_facebook:hover {
+        color: white;
+    }
+    &__icon_twitter {
+        color: #1d9bf0;
+    }
+    &__icon_twitter:hover {
+        color: white;
+    }
+}
+
+.availability {
+    display: flex;
+    margin-top: 1.5rem;
+    align-items: flex-start;
+    &-category {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% / 3);  
+    }
+    &-category__title {
+        color: silver;
+        text-transform: uppercase;
+        align-self: flex-start;
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+        padding-right: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    &-category:last-child &-category__language {
+        padding-left: .5rem;
+        margin-left: 1rem;
+    }
+    &-category__element {
+        width: calc(100% / 2);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 2rem;
+        color: silver;
+    }
+    &-category__language {
+        width: calc(100%/3);
+        text-align: start;
+        padding: .3rem 0;
+    }
+    &-category__language:not(:last-child)::after {
+        content: ', ';
+        color: black;
+    }
+    &-category__icon {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-right: .5rem;
+        position: relative;
+        padding-top: .5rem;
+    }
+    &-category__element:first-of-type &-category__icon {
+        margin-right: 1rem;
+        padding-left: .5rem;
+        padding-bottom: .5rem;
+    }
+    &-category__icon_marked::after {
+        content: '\f111';
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        color: red;
+        vertical-align: top;
+        font-size: .3rem;
+        top: 5px;
+    }
+}
