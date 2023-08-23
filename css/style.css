@@ -879,6 +879,19 @@ button {
   .header-elements__title_second, .header-elements__title_first {
     display: none;
   }
+  .search__field {
+    top: 24px;
+  }
+  .search__filter {
+    top: 24px;
+  }
+  .search__filter::before {
+    left: -105px;
+  }
+  .search__close-button_visible {
+    left: -108px;
+    top: 25px;
+  }
   .movie-container {
     max-height: 200px;
     -webkit-box-pack: center;
