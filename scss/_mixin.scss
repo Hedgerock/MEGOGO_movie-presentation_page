@@ -1,0 +1,35 @@
+@mixin flex ($jc:start, $ai:center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin color ($bg-col:white, $col:orangered) {
+    background-color: $bg-col;
+    color: $col;
+}
+
+@mixin for_pseudo-classes ($cont:'',$font-f:"Font Awesome 6 Free", $font-w: 900) {
+    content: $cont;
+    font-family: $font-f;
+    font-weight: $font-w;
+}
+
+@mixin absolute-pos ($t:initial,$r:initial,$b:initial,$l:initial) {
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+    position: absolute;
+}
+
+@mixin img-dimension ($obj-f, $w:100%, $h:100%) {
+    object-fit: $obj-f;
+    width: $w;
+    height: $h;
+}
+
+@mixin container ($max-w: 1150px) {
+    max-width: $max-w;
+    margin: 0 auto;
+}

@@ -1,0 +1,140 @@
+.slider {
+    &-container {
+        @include container(1000px);
+        padding: 3rem 1rem;
+        overflow: hidden;
+    }
+    &-top {
+        @include flex(space-between);
+        padding: 2rem 0 4rem 0;
+        &__title {
+            text-transform: uppercase;
+            font-size: 2.1rem;
+            font-weight: normal;
+        }
+    }
+    &-swiper {
+        display: flex;
+        &__button {
+            border: 1px solid silver;
+        }
+        &__button:hover &__icon {
+            color: orangered;
+        }
+        &__icon {
+            padding: .4rem 1rem;
+            font-size: 1.5rem;
+            color: grey;
+        }
+        &__button_left_inactive:disabled,
+        &__button_right_inactive:disabled {
+            &__icon {
+                color: silver;
+            }
+        }
+    }
+    &-content {
+        flex-wrap: nowrap;
+        display: flex;
+        transition: all .4s;
+    }
+    &-content-container {
+        @include flex(space-between, flex-start);
+        max-width: 1000px;
+        transition: all 1s;
+    }
+    &-element {
+        width: calc(1000px / 4);
+        min-width: 0;
+        position: relative;
+        &:last-child {
+            margin-right: 0;
+        }
+        & .element-poster,
+        & .element-poster__image,
+        & .element-button,
+        & .element-description__title {
+            transition: .2s ease-in;
+        }
+        &:hover .element-poster::before {
+            @include for_pseudo-classes('\f04b');
+            @include absolute-pos(50%,36%);
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2.2rem;
+            z-index:10;
+        } 
+        &:hover .element-poster::after {
+            @include for_pseudo-classes('Смотреть');
+            @include absolute-pos(60%, 5%);
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5rem;
+        }
+        &:hover .element-poster__image {
+            filter: brightness(40%);
+        }
+        &:hover .element-button {
+            @include absolute-pos(5%,initial,initial,5%);
+            display: block;
+            color: white;
+            font-size: 1.4rem;
+            &:hover {
+                color: orangered;
+            }
+        }
+        &:hover .element-description__title {
+            color: orangered;
+        }
+    }
+}
+
+.element-poster {
+    display: block;
+    max-width: 220px;
+    height: 320px;
+    position: relative;
+    &__image {
+        @include img-dimension(contain);
+    }
+}
+
+.element-button {
+    display: none;
+}
+
+.element-description {
+    &__title {
+        font-weight: bold;
+        color: #333333;
+        white-space: wrap;
+        &::after {
+            content: attr(data-date_and_type);
+            display: block;
+            color: silver;
+            font-size: .9rem;
+            font-weight: normal;
+            margin: .4rem 0 1rem 0;
+        }
+    }
+    &__promotion-status {
+        text-transform: uppercase;
+        font-size: .9rem;
+        &::before {
+            content: 'покупка';
+            color: #00B2B2;
+        }
+        &_special::before {
+            content: 'акция';
+            color: white;
+            background-color: #FC363B;
+            border-radius: .3rem;
+            padding: .2rem .5rem;
+            margin-right: .4rem;
+        }
+        &_special::after {
+            content: 'максимальная';
+            color: orangered;
+        }
+    }
+}

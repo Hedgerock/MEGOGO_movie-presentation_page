@@ -420,11 +420,12 @@
     </div>
     <div class="movie">
         <div class="movie-container">
-            <video class="movie__trailer" src="./video/trailer.mp4" autoplay muted loop></video>
+            <video class="movie__trailer" src="./video/trailer.mp4" autoplay loop muted></video>
             <div class="poster">
                 <img class="poster__image" src="./images/poster/img2.webp" alt="">
             </div>
             <div class="movie-info">
+                <button class="volume-button-off"></button>
                 <div class="top-row">
                     <span class="top-row__text">покупка</span>
                     <span class="top-row__text">sonic the hedgehog</span>
@@ -456,9 +457,6 @@
                         </button>
                     </div>
                 </div>
-                <button class="volume-button">
-                    <i class="volume-button__icon fa-solid fa-volume-xmark"></i>
-                </button>
             </div>
         </div>
         <div class="movie-description">
@@ -592,6 +590,623 @@
                     <span class="availability-category__language">Чешский</span>
                 </div>                
             </div>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="slider-container">
+            <div class="slider-top">
+                <h1 class="slider-top__title">
+                    что еще посмотреть
+                </h1>
+                <div class="slider-swiper">
+                    <button class="slider-swiper__button slider-swiper__button_left">
+                        <i class="slider-swiper__icon fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="slider-swiper__button slider-swiper__button_right">
+                        <i class="slider-swiper__icon fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="slider-content">
+                <div class="slider-content-container">
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img3.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2022, Комедии" href="#">Соник 2 в кино</a>
+                            <span class="element-description__promotion-status element-description__promotion-status_special"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img4.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2013, Комедии" href="#">Турбо</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img5.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2021, Комедии" href="#">Щенячий патруль в кино</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img6.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2005, Комедии" href="#">Роботы</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-content-container">
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img7.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2015, Комедии" href="#">Том и Джерри: Шпион квест</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img8.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2018, Комедии" href="#">Ральф против интернета</a>
+                            <span class="element-description__promotion-status element-description__promotion-status_special"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img9.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2018, Комедии" href="#">В поисках Йети</a>
+                            <span class="element-description__promotion-status element-description__promotion-status_special"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img10.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2021, Комедии" href="#">Рок Дог 2</a>
+                            <span class="element-description__promotion-status element-description__promotion-status_special"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-content-container">
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img11.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2021, Комедии" href="#">Том и Джерри</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img12.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2022, Комедии" href="#">Я краснею</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img13.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2019, Комедии" href="#">Камуфляж и шпионаж</a>
+                            <span class="element-description__promotion-status element-description__promotion-status_special"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img14.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2022, Комедии" href="#">Базз Лайтер</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-content-container">
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img15.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2005, Комедии" href="#">Том и Джерри: Полет на Марс</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img16.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2005, Комедии" href="#">Цыпленок Цыпа</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img17.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2016, Комедии" href="#">Ледниковый период: Столкновение неизбежно</a>
+                            <span class="element-description__promotion-status element-description__promotion-status_special"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img18.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2014, Комедии" href="#">Пингвины Мадагаскара</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-content-container">
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img19.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2022, Комедии" href="#">Странный мир</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img20.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2008, Комедии" href="#">Хортон</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img21.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2020, Комедии" href="#">Вся правда о медведях: Фильм</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img22.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2018, Комедии" href="#">Снежные гонки</a>
+                            <span class="element-description__promotion-status element-description__promotion-status_special"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-content-container">
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img23.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2005, Комедии" href="#">Мадагаскар</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img24.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2018, Приключения" href="#">Суперсемейка 2</a>
+                            <span class="element-description__promotion-status element-description__promotion-status_special"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img25.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="1999, Приключения" href="#">Стальной гигант</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img26.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2019, Комедии" href="#">Зверополюс</a>
+                            <span class="element-description__promotion-status element-description__promotion-status_special"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-content-container">
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img27.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2016, Комедии" href="#">В поисках Дори</a>
+                            <span class="element-description__promotion-status element-description__promotion-status_special"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img28.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2009, Комедии" href="#">Скуби-Ду 3: Тайна начинается</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img29.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2015, Приключения" href="#">Снежная битва</a>
+                            <span class="element-description__promotion-status element-description__promotion-status_special"></span>
+                        </div>
+                    </div>
+                    <div class="slider-element">
+                        <a class="element-poster" href="#">
+                            <img class="element-poster__image" src="./images/poster/img30.webp" alt="">
+                        </a>
+                        <button class="element-button">
+                            <i class="element-button__icon fa-regular fa-bookmark"></i>
+                        </button>
+                        <div class="element-description">
+                            <a class="element-description__title" data-date_and_type="2016, Комедии" href="#">Космический джем: Новое поколение</a>
+                            <span class="element-description__promotion-status"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-directories">
+                <div class="directory">
+                    <h4 class="directory__title">Пользователям и партнерам</h4>
+                    <ul class="directory-elements">
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Все о подписках</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Развиваем MEGOGO вместе</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Программа лояльности</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Контакты для СМИ</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Активировать промокод</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Гайдлайны</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Пользовательское соглашение</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Способы оплаты</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Политика конфиденциальности</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Добавить подкаст</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Удалить профиль</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Подписка для заведений</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >О нас</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Сотрудничество</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Структура собственности</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Вакансии</a>
+                        </li>     
+                    </ul>
+                </div>
+                <div class="directory">
+                    <h4 class="directory__title">На устройствах</h4>
+                    <ul class="directory-elements directory-elements_another">
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Телевизоры и медиаплееры</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Мобильные устройства</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Компьютер</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Подключить телевизор</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Приставка MEGOGO</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="directory">
+                    <h4 class="directory__title">Поддержка пользователей</h4>
+                    <div class="contacts">
+                        <button class="contacts__button">0 800 60 12 34</button>
+                        <ul class="contacts-list">
+                            <li class="contacts-list__element" data-operator="Lifecell">+380 93 555 51 25</li>
+                            <li class="contacts-list__element" data-operator="Київстар">+380 67 555 51 25</li>
+                        </ul>
+                        <span class="contacts__text">
+                            <a class="contacts__link" href="#">support@megogo.net</a>
+                        </span>
+                    </div>
+                    <ul class="directory-elements">
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Все контакты</a>
+                        </li>
+                        <li class="directory-elements__element">
+                            <a class="directory-elements__link" href="#" >Вопросы и ответы</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="applications-and-media">
+                    <h4 class="applications-and-media__title">Наши приложения</h4>
+                    <div class="applications-box">
+                        <a class="applications-link" href="#">
+                            <img class="applications-link__picture" src="./images/apps/img1.webp" alt="">
+                        </a>
+                        <a class="applications-link" href="#">
+                            <img class="applications-link__picture" src="./images/apps/img2.webp" alt="">
+                        </a>
+                        <a class="applications-link" href="#">
+                            <img class="applications-link__picture" src="./images/apps/img3.webp" alt="">
+                        </a>
+                        <a class="applications-link" href="#">
+                            <img class="applications-link__picture" src="./images/apps/img4.webp" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="applications-and-media">
+                    <h4 class="applications-and-media__title applications-and-media__title_last">Мы в соцсетях</h4>
+                    <div class="social-media-box">
+                        <a class="social-media-link social-media-link_facebook" href="#">
+                            <i class="social-media-link__icon fa-brands fa-facebook"></i>
+                        </a>
+                        <a class="social-media-link social-media-link_telegram" href="#">
+                            <i class="social-media-link__icon fa-brands fa-telegram"></i>
+                        </a>
+                        <a class="social-media-link social-media-link_viber" href="#">
+                            <i class="social-media-link__icon fa-brands fa-viber"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-menu">
+            <a class="footer-logo" href="#">
+                <img class="footer-logo__picture" src="./images/logo/megogo.webp" alt="">
+            </a>
+            <div class="footer-box">
+                <a class="footer-box__title footer-box__title_first" href="#">
+                    телеканалы
+                </a>
+                <a class="footer-box__title footer-box__title_second" href="#">
+                    фильмы
+                </a>
+                <a class="footer-box__title footer-box__title_third" href="#">
+                    мультфильмы
+                </a>
+                <a class="footer-box__title footer-box__title_fourth" href="#">
+                    сериалы
+                </a>
+                <a class="footer-box__title footer-box__title_fifth" href="#">
+                    шоу
+                </a>
+                <a class="footer-box__title footer-box__title_sixth" href="#">
+                    спорт
+                </a>
+                <a class="footer-box__title footer-box__title_seventh" href="#">
+                    блогеры
+                </a>
+                <div class="header-elements header-elements_for-footer">
+                    <a class="header-elements__title header-elements__title_extra" href="#">
+                        <span>.</span>
+                        <span>.</span>
+                        <span>.</span>
+                    </a>
+                    <ul class="header-list header-list_for-footer">
+                        <li class="header-list__hidden-element header-list__hidden-element_first">
+                            <a class="header-list__link" href="#">
+                                Телеканалы
+                            </a>
+                        </li>
+                        <li class="header-list__hidden-element header-list__hidden-element_second">
+                            <a class="header-list__link" href="#">
+                                Фильмы
+                            </a>
+                        </li>
+                        <li class="header-list__hidden-element header-list__hidden-element_third">
+                            <a class="header-list__link" href="#">
+                                Мультфильмы
+                            </a>
+                        </li>
+                        <li class="header-list__hidden-element header-list__hidden-element_fourth">
+                            <a class="header-list__link" href="#">
+                                Сериалы
+                            </a>
+                        </li>
+                        <li class="header-list__hidden-element header-list__hidden-element_fifth">
+                            <a class="header-list__link" href="#">
+                                Шоу
+                            </a>
+                        </li>
+                        <li class="header-list__hidden-element header-list__hidden-element_sixth">
+                            <a class="header-list__link" href="#">
+                                Спорт
+                            </a>
+                        </li>
+                        <li class="header-list__hidden-element header-list__hidden-element_special">
+                            <a class="header-list__link" href="#">
+                                Блогеры
+                            </a>
+                        </li>
+                        <li class="header-list__element">
+                            <a class="header-list__link" href="#">
+                                Все о подписках
+                            </a>
+                        </li>
+                        <li class="header-list__element">
+                            <a class="header-list__link" href="#">
+                                Благотворительность
+                            </a>
+                        </li>
+                        <li class="header-list__element">
+                            <a class="header-list__link" href="#">
+                                Подписка для заведений
+                            </a>
+                        </li>
+                        <li class="header-list__element">
+                            <a class="header-list__link" href="#">
+                                Активировать промокод
+                            </a>
+                        </li>
+                        <li class="header-list__element">
+                            <a class="header-list__link" href="#">
+                                Программа лояльности
+                            </a>
+                        </li>
+                        <li class="header-list__element">
+                            <a class="header-list__link" href="#">
+                                Смотри как слышно
+                            </a>
+                        </li>
+                        <li class="header-list__element">
+                            <a class="header-list__link" href="#">
+                                Приставка MEGOGO
+                            </a>
+                        </li>
+                        <li class="header-list__element">
+                            <a class="header-list__link" href="#">
+                                POKER MEGOGO
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-copyright">
+                2023 MEGOGO. Все права защищены.
+            </span>
         </div>
     </div>
     <script src="./scripts/index.js"></script>

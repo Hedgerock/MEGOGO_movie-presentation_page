@@ -9,39 +9,34 @@
 }
 
 .header-container {
-    max-width: 1150px;
-    margin: 0 auto;
+    @include container;
+    @include flex(space-evenly);
     background-color: #1a1a1a;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 .header-title {
+    @include flex;
     height: 100%;
-    display: flex;
-    align-items: center;
 }
 
 .header-elements {
-    display: flex;
-    align-items: center;
+    @include flex;
     position: relative;
     height: 4rem;
     &:hover &__title {
-        color: orangered;
-        background-color: white;
+        @include color;
     }
     &:hover &__title_special {
-        color: orangered;
-        background-color: initial;
+        @include color(initial);
+    }
+    &_for-footer {
+        display: none;
     }
 }
 
 .header-elements__title {
+    @include flex;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
     font-weight: bold;
     padding: 1rem 0.5rem;
     color: white;
@@ -50,13 +45,11 @@
     height: 100%;
     transition: all .1s ease-in-out;
     &:hover {
-        background-color: white;
-        color: orangered;
+        @include color;
     }
 
     &_active {
-        background-color: white;
-        color: orangered;
+        @include color;
     }
     &:hover + .header-list {
         display: block;
@@ -67,8 +60,7 @@
         font-size: 1.5rem;
     }
     &_extra:hover {
-        background-color: white;
-        color: orangered;
+        @include color;
     }
     &_extra span {
         padding-bottom: .5rem;
@@ -84,6 +76,7 @@
     top:56px;
     left: 0;
     background-color: white;
+    box-shadow: 1px 13px 31px -12px rgba(0,0,0,0.75);
     padding: 1rem 2rem;
     z-index: 5;
     max-height: 25rem;
@@ -92,7 +85,7 @@
         display: block;
     }
     &_on-click {
-        left: -77px;
+        left: -78px;
         display: none;
     }
     &_visible {
@@ -123,12 +116,10 @@
 .search {
     position: relative;
     &__field {
+        @include absolute-pos(-18px, -30px);
         opacity: 0;
         z-index: -1;
         height: 4rem;
-        position: absolute;
-        top: -18px;
-        right: -30px;
         width: 17rem;
         outline: none;
         border: none;
@@ -146,36 +137,29 @@
         z-index: 0;
     }
     &__filter {
+        @include absolute-pos(20px);
         z-index: -1;
         opacity: 0;
         height: 4rem;
         transition: all .3s ease-in-out;
-        position: absolute;
-        top: 20px;
     }
     &__filter::before {
-        position: absolute;
-        content: '\f002';
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
+        @include absolute-pos(initial, initial, initial, -165px);
+        @include for_pseudo-classes('\f002');
         font-size: 1.2rem;
         color: silver;
-        left: -165px;
     }
     &__filter_visible {
-        display: flex;
-        align-items: center;
+        @include flex;
+        @include absolute-pos(-20px, -25px);
         opacity: 1;
-        right: -25px;
-        top: -20px;
         z-index: 0;
     }
     &__button {
         color: silver;
     }
     &__button_active {
-        position: absolute;
-        left: -180px;
+        @include absolute-pos(initial, initial, initial, -180px);
         z-index: 10;
     }
     &__close-button {
@@ -183,11 +167,9 @@
         display: none;
     }
     &__close-button_visible {
+        @include absolute-pos (-15px, initial, initial, -180px);
         display: flex;
         opacity: 1;
-        position: absolute;
-        left: -180px;
-        top: -15px;
         transition: all .3s ease-in-out;
     }
 }
@@ -197,17 +179,15 @@
 }
 
 .header-language-sector {
+    @include flex;
     height: 4rem;
-    display: flex;
-    align-items: center;
     position: relative;
     &__title {
         color: silver; 
         height: 100%; 
     }
     &__title_active {
-        background-color: white;
-        color: orangered;
+        @include color;
     }
     &__title:hover {
         color: white;
