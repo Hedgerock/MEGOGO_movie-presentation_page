@@ -34,7 +34,10 @@
         position: relative;
         &__field {
             @include absolute-pos (32px, -30px);
-            width: 17rem;
+            height: 0;
+            &_visible {
+                height: 4rem;
+            }
         }
         &__filter {
             top: 32px;
@@ -127,6 +130,14 @@
     .poster {
         max-width: 100px;
         height: 170px;
+    }
+    .slider-element {
+        &:hover .element-poster::before {
+            @include absolute-pos(50%,40%);
+        } 
+        &:hover .element-poster::after {
+            @include absolute-pos(60%, 17%);
+        }
     }
     .footer {
         &-directories, &-bottom {

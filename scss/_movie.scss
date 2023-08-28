@@ -157,6 +157,7 @@
     }
     &__paragraph {
         font-size: 1.15rem;
+        cursor: default;
     }
 }
 
@@ -223,7 +224,8 @@
     @include flex;
     margin: 1rem 0;
     &__text {
-        color: silver;   
+        color: silver;
+        cursor: default;   
     }
     &__text:first-child {
         border: 1px solid silver;
@@ -295,6 +297,7 @@
         width: 100%;
         padding-right: 2.5rem;
         margin-bottom: 1rem;
+        cursor: default;
     }
     &-category:last-child &-category__language {
         padding-left: .5rem;
@@ -311,6 +314,7 @@
         width: calc(100%/3);
         text-align: start;
         padding: .3rem 0;
+        cursor: default;
     }
     &-category__language:not(:last-child)::after {
         content: ', ';

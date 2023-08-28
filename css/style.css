@@ -175,8 +175,8 @@ button {
   top: 56px;
   left: 0;
   background-color: white;
-  -webkit-box-shadow: 1px 13px 31px -12px rgba(0, 0, 0, 0.75);
-          box-shadow: 1px 13px 31px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 12px 18px -8px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 12px 18px -8px rgba(0, 0, 0, 0.75);
   padding: 1rem 2rem;
   z-index: 5;
   max-height: 25rem;
@@ -222,10 +222,9 @@ button {
   bottom: initial;
   left: initial;
   position: absolute;
-  opacity: 0;
+  width: 0;
   z-index: -1;
   height: 4rem;
-  width: 17rem;
   outline: none;
   border: none;
   font-size: 1.2rem;
@@ -255,8 +254,10 @@ button {
 }
 .search__field_visible {
   display: block;
-  opacity: 1;
   z-index: 0;
+  width: 17rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .search__filter {
   top: 20px;
@@ -601,6 +602,7 @@ button {
 }
 .movie-description__paragraph {
   font-size: 1.15rem;
+  cursor: default;
 }
 
 .direction {
@@ -682,6 +684,7 @@ button {
 }
 .additional-information__text {
   color: silver;
+  cursor: default;
 }
 .additional-information__text:first-child {
   border: 1px solid silver;
@@ -767,6 +770,7 @@ button {
   width: 100%;
   padding-right: 2.5rem;
   margin-bottom: 1rem;
+  cursor: default;
 }
 .availability-category:last-child .availability-category__language {
   padding-left: 0.5rem;
@@ -791,6 +795,7 @@ button {
   width: 33.3333333333%;
   text-align: start;
   padding: 0.3rem 0;
+  cursor: default;
 }
 .availability-category__language:not(:last-child)::after {
   content: ", ";
@@ -1378,7 +1383,10 @@ button {
     bottom: initial;
     left: initial;
     position: absolute;
-    width: 17rem;
+    height: 0;
+  }
+  .search__field_visible {
+    height: 4rem;
   }
   .search__filter {
     top: 32px;
@@ -1470,6 +1478,20 @@ button {
   .poster {
     max-width: 100px;
     height: 170px;
+  }
+  .slider-element:hover .element-poster::before {
+    top: 50%;
+    right: 40%;
+    bottom: initial;
+    left: initial;
+    position: absolute;
+  }
+  .slider-element:hover .element-poster::after {
+    top: 60%;
+    right: 17%;
+    bottom: initial;
+    left: initial;
+    position: absolute;
   }
   .footer-directories, .footer-bottom {
     -webkit-box-orient: vertical;
